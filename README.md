@@ -5,20 +5,17 @@
 - A leg has a from, to, and an associated value
 - The shortest route is a list of one or more legs, if any, with the lowest total value
 - Example leg:
-
 	A --1--> B
 	A: From
 	B: To
 	1: Value
 	
 - Example network of routes:
-
 	  --1--> B --2--> 
 	A 				C --1--> D
 	  -------2------>
 
 - Shortest routes for the above network:
-
 	A to B: [A --1--> B]
 	B to C: [B --2--> C]
 	C to D: [C --1--> D]
