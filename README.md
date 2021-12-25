@@ -13,7 +13,7 @@
 - Example network of routes:
 ```
       --1--> B --2--> 
-	A                 C --1--> D
+    A                 C --1--> D
       -------2------>
 ```
 
