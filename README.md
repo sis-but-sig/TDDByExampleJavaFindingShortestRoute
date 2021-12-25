@@ -11,11 +11,14 @@
 	1: Value
 	
 - Example network of routes:
+```
 	  --1--> B --2--> 
 	A 				C --1--> D
 	  -------2------>
+```
 
 - Shortest routes for the above network:
+```
 	A to B: [A --1--> B]
 	B to C: [B --2--> C]
 	C to D: [C --1--> D]
@@ -23,5 +26,5 @@
 	A to C: [A --2--> C]
 	A to D: [A --2--> C, C --1--> D]
 	A to E: []
-
+```
 	
