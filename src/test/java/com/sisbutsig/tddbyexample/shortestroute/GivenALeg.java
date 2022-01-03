@@ -84,4 +84,17 @@ public class GivenALeg {
       assertThat(e.getMessage(), is("value is less than one."));
     }
   }
+
+  @Test
+  public void ofShouldUpperCaseFromAndTo() {
+    Leg leg = Leg.of("a", "b", 1.0);
+    assertThat(leg.getFrom(), is("A"));
+    assertThat(leg.getTo(), is("B"));
+  }
+
+  @Test
+  public void toStringShouldReturnLegDetails() {
+    Leg leg = Leg.of("A", "B", 1.0);
+    assertThat(leg.toString(), is("Leg [from=A, to=B, value=1.0]"));
+  }
 }

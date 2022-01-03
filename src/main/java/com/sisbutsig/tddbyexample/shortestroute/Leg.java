@@ -37,6 +37,12 @@ public final class Leg {
     return Optional.ofNullable(from)
                    .map(String::trim)
                    .filter(str -> !str.isEmpty())
+                   .map(String::toUpperCase)
                    .orElseThrow(() -> new NullPointerException(expMsg));
+  }
+
+  @Override
+  public String toString() {
+    return "Leg [from=" + from + ", to=" + to + ", value=" + value + "]";
   }
 }
