@@ -73,4 +73,19 @@ public class GivenANetworkOfRoutes {
     // A to E: []
     assertThat(routes.findShortest("A", "E"), empty());
   }
+
+  @Test
+  public void findShortestShouldHandleCycles() {
+    Leg legAB = Leg.of("A", "B", 1.0);
+    Leg legBA = Leg.of("B", "A", 1.0);
+    Leg legBC = Leg.of("B", "C", 1.0);
+    NetworkOfRoutes routes = new NetworkOfRoutes().add(legAB)
+                                                  .add(legBA)
+                                                  .add(legBC);
+
+    assertThat(routes.findShortest("A", "B"), contains(legAB));
+    assertThat(routes.findShortest("B", "A"), contains(legBA));
+    assertThat(routes.findShortest("B", "C"), contains(legBC));
+    assertThat(routes.findShortest("A", "C"), contains(legAB, legBC));
+  }
 }
