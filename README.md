@@ -1,5 +1,7 @@
 # TDD by Example in Java: Finding Shortest Route
 
+### [Check out the actual TDD journey here](https://youtu.be/kPgQzLU2uG0) ###
+
 - We need to find the shortest route in a network of routes
 - A route is one or more legs
 - A leg has a from, to, and an associated value
